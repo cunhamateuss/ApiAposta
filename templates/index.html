@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aposta Automática</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .card {
+            background: #1f1f1f;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,255,0,0.3);
+        }
+        .odd {
+            font-size: 28px;
+            color: #00ff99;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #00ff99;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Aposta do Dia</h2>
+    <p><strong>Data:</strong> {{ aposta.data }}</p>
+    <p><strong>Jogo:</strong> {{ aposta.jogo }}</p>
+    <p><strong>Aposta:</strong> {{ aposta.aposta }}</p>
+    <p class="odd">Odd: {{ aposta.odd }}</p>
+    <p><strong>Probabilidade Modelo:</strong> {{ aposta.prob_modelo }}</p>
+    <p><strong>Value:</strong> {{ aposta.value }}</p>
+    <button class="btn" onclick="location.reload()">Gerar Nova</button>
+</div>
+
+</body>
+</html>
